@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>kt5</title>
+        <style>
+                     body {
+    margin: 0;
+      padding: 0;
+      background: #81cae7; /* голубой цвет для неба */
+    }
+    
+    .car {
+      width: 200px;
+      height: 100px;
+      background: #FFD700; /* желтый цвет для машины */
+      position: absolute;
+      z-index: 3;
+      left: -200px; /* начальное положение за пределами экрана */
+      top: 500px; /* расположение машины по вертикали */
+      animation: moveCar 2s forwards; /* анимация для выезда машины */
+      border-radius: 0px 100px 15px 100px;
+    }
+    @keyframes moveCar {
+        from {
+                    left: 0px;
+                }
+      to {
+        left: calc(100% - 250px); /* конечное положение перед правым краем экрана */
+      }
+    }
+
+            @keyframes movie {
+                from {
+                    left: 0px;
+                }
+                to {
+                    left:calc(100% - 250px);
+                }
+            }
+            
+    .wheel {
+      width: 50px;
+      height: 50px;
+      background-color: #333333;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 4;
+      bottom: 0;
+    }
+    
+   .left {
+      left: 46px;
+      top: 70px;
+    }
+    
+    .right {
+      right: 25px;
+      top: 70px;
+    }
+
+    .taxi {
+    width: 50px;
+      height: 20px;
+      background-color: #efe9e9;
+      z-index: 4;
+      position: absolute;
+      left: 50px;
+      top: 30px;
+    }
+    
+    .taxi1 {
+    width: 50px;
+      height: 20px;
+      background-color: #efe9e9;
+      z-index: 4;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+
+    .landscape {
+      position: relative;
+      z-index: 1;
+      bottom: 0;
+      width: 100%;
+      top: 550px;
+      height: 200px;
+      background-color: #6d5647;
+    } 
+    .dor{
+      position: relative;
+      z-index: 2;
+      top: 80px;
+      width: 100%;
+      height: 20px;
+      background-color: #ece5e1;
+    }
+        </style>
+    </head>
+    <body>
+        <div class="car">
+            <div class="taxi"></div>
+            <div class="taxi1"></div>
+            <div class="wheel left"></div>
+            <div class="wheel right"></div>
+          </div>
+          <div class="landscape">
+          <div class="dor"> </div>
+          </div>
+        </body>    
+</html>
